@@ -1,0 +1,33 @@
+<div class="row">
+  <!-- Login button -->
+  <button id="login_button" (click)="openLoginForm()">Login</button>
+
+  <!-- Login form -->
+  <div id="login-form" class="popup" *ngIf="showLoginForm">
+    <button id="close-button" (click)="closeLoginForm()">x</button>
+    <form (ngSubmit)="login()" [formGroup]="loginForm">
+      <!-- User ID input -->
+      <div class="input-group">
+        <input type="text" id="username" name="username" placeholder="User ID" formControlName="username">
+        <br>
+        <small *ngIf="loginForm.get('username').invalid && (loginForm.get('username').dirty || loginForm.get('username').touched)" class="block danger">
+          <div *ngIf="loginForm.get('username').errors?.['required']">User ID is required!</div>
+        </small>
+      </div>
+      <!-- Password input -->
+      <div class="input-group">
+        <input type="password" id="password" name="password" placeholder="Password" formControlName="password">
+        <br>
+        <small *ngIf="loginForm.get('password').invalid && (loginForm.get('password').dirty || loginForm.get('password').touched)" class="block p error">
+          <div *ngIf="loginForm.get('password').errors?.['required']">Password is required!</div>
+        </small>
+      </div>
+      <!-- Submit button -->
+      <div class="input-group">
+        <button type="submit" class="submit-button">Login</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+

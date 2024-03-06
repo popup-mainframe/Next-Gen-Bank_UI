@@ -1,0 +1,79 @@
+#login_button {
+    padding: 0;
+    margin-right: 10px;
+    padding: 5px 10px;
+    background-color: black;
+    border-radius: 25px;
+    border:0px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
+.row{
+    margin-right: 40px;
+}
+
+.popup {
+    display: block;
+    position: absolute;
+    top: 52px;
+    left: 1120px;
+    transform: translateX(-50%);
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 220px;
+    height:180px;
+    background: #E9F1F7;
+  }
+
+  #login_button {
+    cursor: pointer;
+  }
+
+  .input-group {
+    margin-bottom: 8px;
+}
+
+  .submit-button {
+    background: #16537e; border-radius: 41px;
+    color: white;
+    width: 180px;
+    height: 30px;
+    border: 0px;
+  }
+
+  #close-button {
+    position: absolute;
+    top: 3px;
+    right: 1px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 10px;
+    font-family: Inika; 
+    font-weight: 400;
+     word-wrap: break-word
+  }
+
+  #username {
+      border: 0px;
+      width:180px;
+    height:30px;
+      font-size: 15px; font-family: Inika; font-weight: 400; word-wrap: break-word ;
+      left: 10px;
+  }
+
+  #password {
+      border: 0px;
+      width:180px;
+    height:30px;
+      font-size: 15px; font-family: Inika; font-weight: 400; word-wrap: break-word;
+  }
+
+ .highlight {
+    background-color: darkgray ; 
+}

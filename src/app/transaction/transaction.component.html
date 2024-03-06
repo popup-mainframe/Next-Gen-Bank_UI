@@ -1,0 +1,62 @@
+<div>
+    <!-- Navigation bar -->
+    <app-nav-bar></app-nav-bar>
+
+    <div class="container">
+        <!-- Left sidebar -->
+        <app-leftbar></app-leftbar>
+
+        <div class="middle_bar">
+            <!-- Top content -->
+            <div class="top-content">
+                <!-- Balance details section -->
+                <div class="Balance_details">
+                    <p><strong>Balance Details as on 08/02/2024</strong></p>
+                </div>
+                <!-- Balance details info -->
+                <div class="Balance_details_info">
+                    <p class="details">Account Number<span class="info1">{{ selectedAccount?.accountNumber }}</span></p>
+                    <p class="details">Available Balance<span class="info2">USD {{selectedAccount?.availableBalance }}</span></p>
+                    <p class="details">Cheques In Clearing<span class="info3">USD {{ selectedAccount?.chequesInClearing }}</span></p>
+                    <p class="note">Note: Transaction conducted on non-banking day will have the transaction date as the next working day.</p>
+                </div>
+            </div>
+
+            <!-- Transaction history -->
+            <div class="info">
+                <p>Transaction History</p>
+                <button class="back-button btn-primary" (click)="goBack()">Back</button>
+            </div>
+
+            <!-- Table for displaying transaction history -->
+            <table class="table1 table-fixed">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Serial Number</th>
+                        <th>Transaction Date</th>
+                        <th>Transaction Remark</th>
+                        <th>Credit/Debit</th>
+                        <th>Amount(USD)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Iterate over transactions -->
+                    <tr *ngFor="let transaction of transactions">
+                        <td>{{ transaction.serialNumber }}</td>
+                        <td>{{ transaction.transactionDate }}</td>
+                        <td>{{ transaction.transactionRemark }}</td>
+                        <td>{{ transaction.creditDebit }}</td>
+                        <td>{{ transaction.amountUSD }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Right sidebar -->
+        <app-rightbar></app-rightbar>
+    </div>
+
+    <!-- Footer -->
+    <app-footer></app-footer>
+</div>
+

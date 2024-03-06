@@ -1,0 +1,135 @@
+.footer {
+    width: 1263px;
+    height: 160px;
+    left: 0px;
+    top: 730px;
+    position: absolute;
+    /* position: relative; */
+}
+
+.background-container {
+    width: 1263px;
+    height: 160px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    background:  #E9F1F7;
+}
+ 
+
+.title {
+    width: 241px;
+    height: 52px;
+    left: 90px;
+    top: 30px;
+    position: absolute;
+    color: black;
+    font-size: 20px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-weight: 600;
+    word-wrap: break-word;
+}
+
+.content-container {
+    width: 285px;
+    height: 77.10px;
+    left: 70px;
+    top: 52px;
+    position: absolute;
+}
+
+.background {
+    width: 185px;
+    height: 47.10px;
+    left: 0px;
+    top: 13px;
+    position: absolute;
+    background: #16537e;
+    border-radius: 38.55px;
+}
+
+.phone-number {
+    width: 189px;
+    height: 38px;
+    left: 50px;
+    top: 23px;
+    position: absolute;
+    color: white;
+    font-size: 21px;
+    font-family: Inter;
+    font-weight: 600;
+    word-wrap: break-word;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    left: 12px;
+    top: 20px;
+    position: absolute;
+}
+.title1 {
+    width: 241px;
+    height: 52px;
+    left: 360px;
+    top: 30px;
+    position: absolute;
+    color: black;
+    font-size: 20px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-weight: 600;
+    word-wrap: break-word;
+}
+
+.content_footer {
+    width: 385px;
+    height: 77.10px;
+    left: 330px;
+    top: 52px;
+    position: absolute;
+}
+
+.background_G {
+    width: 200px;
+    height: 47.10px;
+    left: 0px;
+    top: 13px;
+    position: absolute;
+    background: #16537e;
+    border-radius: 38.55px;
+}
+
+.icons img {
+    width: 30px;
+    height: 30px;
+    left: 12px;
+    display: inline-block;
+    margin: 8px;
+}
+ 
+.copyright {
+position: absolute;
+width: 200px;
+height: 20px;
+left: 950px;
+top: 118px;
+}
+
+.copy_content {
+width: 264px;
+height: 38px;
+left: 30px;
+top: 0;
+position: absolute;
+color: black;
+font-size: 18px;
+font-weight: 0;
+
+}
+
+.copyright_icon {
+width: 20px;
+height: 20px;
+left: 8px;
+position: absolute;
+}
