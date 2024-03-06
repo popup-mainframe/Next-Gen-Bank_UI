@@ -4,7 +4,6 @@
     left: 0px;
     top: 730px;
     position: absolute;
-    /* position: relative; */
 }
 
 .background-container {
@@ -108,28 +107,28 @@
 }
  
 .copyright {
-position: absolute;
-width: 200px;
-height: 20px;
-left: 950px;
-top: 118px;
+    position: absolute;
+    width: 200px;
+    height: 20px;
+    left: 950px;
+    top: 118px;
 }
 
 .copy_content {
-width: 264px;
-height: 38px;
-left: 30px;
-top: 0;
-position: absolute;
-color: black;
-font-size: 18px;
-font-weight: 0;
+    width: 264px;
+    height: 38px;
+    left: 30px;
+    top: 0;
+    position: absolute;
+    color: black;
+    font-size: 18px;
+    font-weight: 0;
 
 }
 
 .copyright_icon {
-width: 20px;
-height: 20px;
-left: 8px;
-position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 8px;
+    position: absolute;
 }

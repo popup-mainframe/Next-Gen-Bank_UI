@@ -1,9 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
-
-
-
-
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './home/header/header.component';
@@ -30,13 +26,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 
-
-
-
-
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,14 +42,7 @@ import { HttpClientModule } from '@angular/common/http';
     MiddlebarComponent,
     RightbarComponent,
     TransactionComponent,
-    
-    
-    
-  
-   
-    
-  
-  
+ 
   ],
   
 
@@ -75,9 +57,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    
-    
-    
+ 
   ],
   
 

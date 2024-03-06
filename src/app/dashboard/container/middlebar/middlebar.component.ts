@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataserviceService } from '../../../services/dataservice.service';
 import { Router } from '@angular/router';
-import { catchError, forkJoin, of, tap } from 'rxjs';
 import { CookieService } from 'ngx-cookie-service';
 
 @Component({
@@ -22,13 +21,11 @@ export class MiddlebarComponent implements OnInit {
     }
   }
   
-
-  
   navigateToTransaction(): void {
     const accountDetails = {
       id: "1",
       accountNumber: "122345",
-      availableBalance: "1657.98",
+      availableBalance:  "1657.98",
       chequesInClearing: "0.00"
     };
 
