@@ -44,3 +44,6 @@ th {
   font-weight: bolder;
   font-size: 20px;
  }
+ .cursor-pointer{
+    cursor: pointer;
+ }

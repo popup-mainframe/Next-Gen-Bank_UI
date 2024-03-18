@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrl: './rightbar.component.css'
 })
 export class RightbarComponent {
+  
+  constructor() { }
 
+  preventDefault(event: Event) {
+    event.preventDefault();
+  }
 }

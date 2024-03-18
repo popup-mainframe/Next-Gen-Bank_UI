@@ -24,6 +24,13 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { DecimalPlacesPipe } from './decimal-places.pipe';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+
+
+
 
 
 @NgModule({
@@ -42,6 +49,8 @@ import { HttpClientModule } from '@angular/common/http';
     MiddlebarComponent,
     RightbarComponent,
     TransactionComponent,
+    DecimalPlacesPipe,
+    
  
   ],
   
@@ -57,13 +66,18 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
- 
+   
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    
   ],
   
 
   providers: [
     provideClientHydration(),
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+   
   ],
   bootstrap: [AppComponent]
 })

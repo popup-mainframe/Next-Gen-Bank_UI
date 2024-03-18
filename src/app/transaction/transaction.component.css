@@ -3,7 +3,7 @@
   height: 645px;
   position: absolute;
 }
-
+ 
 .middle_bar {
   width: 715px;
   height: 650px;
@@ -13,36 +13,86 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   position: absolute;
 }
-
-
-.table1 {
-  width: 575px;
+/* .table-container {
+  height: 300px; /* Adjust the height as needed */
+  /* overflow-y: auto; /* Enable vertical scroll */
+/* }  */
+ 
+table {
+  /* width: 475px; Ensure table fills its container */
+  margin-bottom: 20px; /* Add some space below the table */
   position: relative;
-  border-radius: 10px;
-  left: 70px;
-  table-layout: fixed;
+  height: 100px;
+  /* left: 70px; */
+  width: 475px; /* Make table fill its container */
+  max-height: 100px; /* Limit the height of the table */
+  /* overflow-y: auto; Enable vertical scrollbar if needed */
+}
+.mat-table {
+  box-shadow: none !important; /* Remove shadow effect */
+  width: 475px;
+}
+ 
+/* In your component's CSS file */
+.mat-paginator {
+  font-size: 12px; 
 }
 
-.table1 tbody {
+.mat-paginator-range-label,
+.mat-paginator-page-size-label {
+  font-size: 12px; 
+}
+
+.mat-paginator-page-size {
+  padding: 14px;
+}
+
+.mat-mdc-paginator {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  width: 630px; 
+  min-height: auto; 
+  background-color: #d6eaf8;
+  
+}
+
+.mdc-data-table__table{
+  min-width: 630px;
+  border: 0;
+  border-spacing: 0;
+  margin-left: 40px;
+
+}
+
+.mat-mdc-header-row{
+  background-color:  #E9F1F7;;
+}
+
+.table__table {
+  white-space: normal !important;
+}
+
+.table tbody {
   display: block;
   max-height: 230px;
-  overflow-y: auto; 
+  overflow-y: auto;
   width: 100%;
-  table-layout: fixed;
+
 }
-  
+ 
 th, td {
-  padding: 8px;
+  padding: 5px;
   text-align: left;
   border-right: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
-  background-color: white; 
-  font-size: 13px;
+  font-size: 12px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
  
 }
-
+ 
 th {
   background-color: #E9F1F7;
   font-weight: bold;
@@ -52,13 +102,13 @@ th {
   table-layout: fixed;
   font-size: 14px;
 }
-
+ 
 tr {
   display: table;
   width: 100%;
   table-layout: fixed;
 }
-
+ 
 .info {
   color: black;
   border-radius: 5px 5px 0 0;
@@ -68,11 +118,11 @@ tr {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   font-weight: bolder;
 }
-
+ 
 .info p {
   font-size: 18px;
 }
-
+ 
 .Balance_details {
   width: 575px;
   height: 60px;
@@ -84,14 +134,14 @@ tr {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   background-color: #E9F1F7;
 }
-
+ 
 .Balance_details p {
   padding-left: 30px;
   font-size: 18px;
   font-weight: bold;
   height: 5px;
 }
-
+ 
 .Balance_details_info {
   width: 575px;
   background-color: white;
@@ -101,43 +151,44 @@ tr {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
 }
-
+ 
 .Balance_details_info p {
   padding-left: 20px;
   padding-top: 10px;
   padding-right: 20px;
 }
-
+ 
 .Balance_details_info .details {
   font-weight: bolder;
   font-size: 14px;
 }
-
+ 
 .Balance_details_info .info1 {
   font-weight: lighter;
   padding-left: 42px;
 }
-
+ 
 .Balance_details_info .info2 {
   font-weight: lighter;
   padding-left: 35px;
 }
-
+ 
 .Balance_details_info .info3 {
   font-weight: lighter;
   padding-left: 23px;
 }
-
+ 
 .Balance_details_info p.note {
   font-size: 11.5px;
 }
-
+ 
 .back-button {
   position: absolute;
   top: 0;
   right: 0;
-  margin-top: 280px; 
-  margin-right: 15px; 
+  margin-top: 280px;
+  margin-right: 15px;
   border: none;
   font-size: 14px;
 }
+ 
