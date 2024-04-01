@@ -1,5 +1,4 @@
-.container {
-    width: 1263px;
-    height: 645px;
-    position: absolute;
+.container-fluid{
+    width: 100%; 
+    height: 100%; 
 }

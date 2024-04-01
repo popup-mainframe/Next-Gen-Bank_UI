@@ -28,6 +28,7 @@ import { DecimalPlacesPipe } from './decimal-places.pipe';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { Footer1Component } from './footer-1/footer-1.component';
 
 
 
@@ -50,8 +51,7 @@ import { MatSortModule } from '@angular/material/sort';
     RightbarComponent,
     TransactionComponent,
     DecimalPlacesPipe,
-    
- 
+    Footer1Component,
   ],
   
 
@@ -66,14 +66,12 @@ import { MatSortModule } from '@angular/material/sort';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-   
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
     
   ],
   
-
   providers: [
     provideClientHydration(),
     provideAnimationsAsync(),
@@ -81,4 +79,5 @@ import { MatSortModule } from '@angular/material/sort';
   ],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

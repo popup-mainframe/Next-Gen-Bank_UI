@@ -25,7 +25,6 @@ export class MiddlebarComponent implements OnInit {
     const accountDetails = {
       id: "1",
       accountNumber: "122345",
-      availableBalance:  "1657.98",
       chequesInClearing: "0.00"
     };
 
