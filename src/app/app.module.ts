@@ -7,7 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './navbar/login/login.component';
 import { FooterComponent } from './footer/footer.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { NavBarComponent1 } from './nav-bar/nav-bar.component';
 import { LogoutComponent } from './nav-bar/logout/logout.component';
 import { ContainerComponent } from './dashboard/container/container.component';
 import { LeftbarComponent } from './dashboard/container/leftbar/leftbar.component';
@@ -43,7 +43,7 @@ import { Footer1Component } from './footer-1/footer-1.component';
     LoginComponent,
     FooterComponent,
     DashboardComponent,
-    NavBarComponent,
+    NavBarComponent1,
     LogoutComponent,
     ContainerComponent,
     LeftbarComponent,
