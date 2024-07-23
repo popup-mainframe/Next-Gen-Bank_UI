@@ -13,6 +13,8 @@
               <!-- Balance details section -->
                <div class="Balance_details">
                   <p><strong>Balance Details as on 08/02/2024</strong></p>
+                  <!-- <p><strong>Balance Details as on {{ currentDate }}</strong></p> -->
+
                 </div>
               <!-- Balance details info -->
                 <div class="Balance_details_info">
@@ -30,10 +32,10 @@
 
             <div class="table-container">
               <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8 table1">
-                  <!-- Serial Number Column -->
-                  <ng-container matColumnDef="serialNumber">
-                    <th mat-header-cell *matHeaderCellDef> Serial Number </th>
-                    <td mat-cell *matCellDef="let transaction">{{ transaction.serialNumber }}</td>
+                  <!-- Transaction ID Column -->
+                  <ng-container matColumnDef="id">
+                    <th mat-header-cell *matHeaderCellDef> Transaction ID </th>
+                    <td mat-cell *matCellDef="let transaction">{{ transaction.id }}</td>
                   </ng-container>
 
                   <!-- Transaction Date Column -->
@@ -44,7 +46,7 @@
 
                   <!-- Transaction Remark Column -->
                   <ng-container matColumnDef="transactionRemark">
-                    <th mat-header-cell *matHeaderCellDef> Transaction Remark </th>
+                    <th mat-header-cell *matHeaderCellDef> Transaction Remarks </th>
                     <td mat-cell *matCellDef="let transaction">{{ transaction.transactionRemark }}</td>
                   </ng-container>
 
@@ -57,13 +59,13 @@
                   <!-- Amount(USD) Column -->
                   <ng-container matColumnDef="amountUSD">
                     <th mat-header-cell *matHeaderCellDef> Amount(USD) </th>
-                    <td mat-cell *matCellDef="let transaction">{{ transaction.amountUSD }}</td>
+                    <td mat-cell *matCellDef="let transaction" class="text-right">{{ transaction.amountUSD }}</td>
                   </ng-container>
 
                   <!-- Balance Column -->
                   <ng-container matColumnDef="balance">
                     <th mat-header-cell *matHeaderCellDef> Balance(USD) </th>
-                    <td mat-cell *matCellDef="let transaction">{{ transaction.balance }}</td>
+                    <td mat-cell *matCellDef="let transaction" class="text-right">{{ transaction.balance }}</td>
                   </ng-container>
 
                   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

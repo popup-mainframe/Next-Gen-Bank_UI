@@ -216,4 +216,7 @@ tr {
             height: 95%;
         }
       }
-    
+      .text-right {
+        text-align: right;
+      }
+      

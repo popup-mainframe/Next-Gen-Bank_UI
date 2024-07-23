@@ -16,9 +16,15 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "baseUrl": "./src", // Adding baseUrl to help with relative imports
+    "paths": {
+      "*": ["*"] // Allow module resolution in src folder
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false
-  }
+  },
+  "include": ["src/**/*.ts"], // Include all TypeScript files in the src directory
+  "exclude": ["node_modules", "dist"]
 }

@@ -3,14 +3,20 @@ import { HttpClient } from '@angular/common/http';
 import { HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { CookieService } from 'ngx-cookie-service';
-import { serverUrl} from '../config'
+// import { serverUrl} from 'config'
+
+declare global {
+  interface Window {
+      config: any;
+  }
+}
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataserviceService {
 
-  private serverUrl = serverUrl;
+  private serverUrl =  window.config.serverUrl;
 
   constructor(private http: HttpClient, private cookieService: CookieService) { }
 

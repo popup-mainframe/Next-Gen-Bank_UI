@@ -6,12 +6,14 @@ import { DecimalPlacesPipe } from '../decimal-places.pipe';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator,PageEvent} from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
+import { DatePipe } from '@angular/common';
  
 @Component({
   selector: 'app-transaction',
   templateUrl: './transaction.component.html',
   styleUrls: ['./transaction.component.css'],
   providers: [DecimalPlacesPipe]
+    
 })
 export class TransactionComponent implements OnInit {
   selectedAccount: any;
@@ -22,15 +24,21 @@ export class TransactionComponent implements OnInit {
   @ViewChild(MatSort) sort!: MatSort; // Add definite assignment assertion for sort
   pageSize = 5; // Default page size
   pageSizeOptions = [2, 3, 4, 5]; // Default page size options
+  // currentDate: string;
  
-  displayedColumns: string[] = ['serialNumber', 'transactionDate', 'transactionRemark', 'creditDebit', 'amountUSD', 'balance'];
+  displayedColumns: string[] = ['id', 'transactionDate', 'transactionRemark', 'creditDebit', 'amountUSD', 'balance'];
  
   constructor(
     private router: Router,
     private route: ActivatedRoute,
     private dataService: DataserviceService,
-    private decimalPlacesPipe: DecimalPlacesPipe
-  ) {}
+    private decimalPlacesPipe: DecimalPlacesPipe,
+    // private datePipe: DatePipe
+  ) {
+    // this.currentDate = this.datePipe.transform(new Date(), 'MM/dd/yyyy') || '';
+  }
+
+ 
  
   ngOnInit(): void {
      
@@ -47,19 +55,20 @@ export class TransactionComponent implements OnInit {
           next: (data: any) => {
             if (Array.isArray(data.transactions)) {
 
-              const lastTransaction = data.transactions[data.transactions.length - 1];
+              // const lastTransaction = data.transactions[data.transactions.length - 1];
+              const lastTransaction = data.transactions[0];
               const lastBalance = lastTransaction.new_balance;
               this.selectedAccount.availableBalance = this.decimalPlacesPipe.transform(lastBalance)             
                this.transactions = data.transactions.map(
-                (transaction, index) => ({
-                  serialNumber: index + 1,
+                (transaction => ({
+                  // serialNumber: index + 1,
+                  id: transaction.id,
                   transactionDate: transaction.date,
                   transactionRemark: transaction.bankname,
                   creditDebit: this.mapTransactionType(transaction.transaction_type), // Change here
                   amountUSD: this.decimalPlacesPipe.transform(Math.abs(transaction.transaction_value)),
                   balance: this.decimalPlacesPipe.transform(transaction.new_balance)
-                })
-              );
+                })));
               this.dataSource = new MatTableDataSource(this.transactions);
               this.dataSource.paginator = this.paginator;
               this.dataSource.sort = this.sort;

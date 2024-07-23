@@ -1,5 +1,5 @@
 export interface Transactions {
-  serialNumber: number;
+  id: number;
   transactionDate: string;
   transactionRemark: string;
   creditDebit: string;

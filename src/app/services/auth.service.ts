@@ -1,14 +1,20 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { serverUrl} from '../config'
+// import { serverUrl } from 'config';
+
+declare global {
+  interface Window {
+      config: any;
+  }
+}
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
   
-  private serverUrl = serverUrl;
+  private serverUrl = window.config.serverUrl;
 
   constructor(private http: HttpClient) {}
   
